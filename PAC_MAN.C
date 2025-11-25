@@ -73,8 +73,8 @@ void move_pacman()
     int new_px;
     if (kbhit())
     {
-	int new_py;
-	int new_px;
+	new_py;
+	new_px;
 	int ch = getch();
 	if (ch == 0 || ch == 224)
 	    ch = getch();
@@ -208,3 +208,4 @@ void main()
 
     } while (choice != 2);
 }
+
