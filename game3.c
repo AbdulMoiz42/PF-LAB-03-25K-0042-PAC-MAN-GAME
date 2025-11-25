@@ -106,7 +106,7 @@ void setup()
     {
         for (j = 0; j < W; j++)
         {
-            if (playfield[i][j] == '#')
+            if (playfield[i][j] == 'C')
                 playfield[i][j] = ' ';
             if (playfield[i][j] == '@')
                 playfield[i][j] = '.';
@@ -122,14 +122,14 @@ void setup()
         px = 1;
     }
 
-    playfield[py][px] = '#';
+    playfield[py][px] = 'C';
     playfield[gy1][gx1] = '@';
     playfield[gy2][gx2] = '@';
 
     if (playfield[py][px] == '@')
         game_end = 1;
 
-    if (food_collect >= 300)
+    if (food_collect >= 200)
         game_end = 1;
 }
 
@@ -144,8 +144,8 @@ void draw_playfield()
         for (j = 0; j < W; j++)
         {
             ch = playfield[i][j];
-            if (ch=='O')
-              textcolor(yellow);
+            if (ch=='C')
+              textcolor(YELLOW);
             else if (ch == '@')
                 textcolor(RED);
             else
@@ -181,3 +181,4 @@ void main()
     game_result();
     getch();
 }
+
